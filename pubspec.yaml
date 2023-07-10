@@ -1,8 +1,8 @@
 name: event_emitter
 description: Event tools inspired by NodeJS.
 version: 1.0.0
-repository: http://thispage.tech:9680/jclee1995/event_emitter
-issue_tracker: http://thispage.tech:9680/jclee1995/event_emitter/issues
+repository: https://github.com/jacklee1995/event_emitter_dart
+issue_tracker: https://github.com/jacklee1995/event_emitter_dart/issues
 auth:
   name: jcaklee
   email: 291148484@163.com
