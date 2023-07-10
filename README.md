@@ -1,4 +1,3 @@
-
 # event_emitter
 
 A event tools such as EventEmitter(inspired by NodeJS EventEmitter).
@@ -10,30 +9,25 @@ A event tools such as EventEmitter(inspired by NodeJS EventEmitter).
 **My Email**: [291148484@163.com](mailto:291148484@163.com)
 
 ```dart
+import 'package:event_emitter/event_emitter.dart';
 
-EventEmitter emitter =EventEmitter();
+void main(List<String> args) {
+  print('这是一个使用示例：');
+  EventEmitter emitter = EventEmitter();
 
+  void listener_1() => print("执行 listener_1");
+  void listener_2() => print("执行 listener_2");
 
-void listener_1() => print("执行 listener_1");
+  emitter.on("event_1", listener_1); // 添加 listener_1
+  emitter.on("event_1", listener_2); // 添加 listener_2
 
-void listener_2() => print("执行 listener_2");
+  print(emitter.events); // 输出当前事件
+  emitter.emit("event_1", []);
 
-
-emitter.on("event_1", listener_1);// add listener_1
-
-emitter.on("event_1", listener_2);// add listener_2
-
-
-print(emitter.events);
-
-emitter.emit("event_1");
-
-
-emitter.off("event_1", listener_1);// remove listener_1
-
-print(emitter.events);
-
-emitter.emit("event_1");
+  emitter.off("event_1", listener_1); // 移除 listener_1
+  print(emitter.events); // 输出当前事件
+  emitter.emit("event_1", []);
+}
 
 ```
 

@@ -11,9 +11,9 @@ void main(List<String> args) {
   emitter.on("event_1", listener_2); // 添加 listener_2
 
   print(emitter.events); // 输出当前事件
-  emitter.emit("event_1");
+  emitter.emit("event_1", []);
 
   emitter.off("event_1", listener_1); // 移除 listener_1
   print(emitter.events); // 输出当前事件
-  emitter.emit("event_1");
+  emitter.emit("event_1", []);
 }
